@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es5",
@@ -25,3 +26,20 @@
     "src"
   ]
 }
+=======
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "target": "ES6",
+    "downlevelIteration": true,
+    "module": "CommonJS",
+    "lib": ["es6"],
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}
+>>>>>>> a6f7d42 (Init commit)
