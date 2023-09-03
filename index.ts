@@ -1,6 +1,6 @@
 import express, {json} from "express";
 import cors from "cors";
-import 'express-async-errors';
+import "express-async-errors";
 import {handleError, ValidationError} from "./utils/errors";
 
 const app = express();
