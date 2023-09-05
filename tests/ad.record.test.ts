@@ -1,30 +1,25 @@
-// import {AdRecord} from "../records/ad.record";
-//
-//
-// let ad: AdRecord;
-//
-// beforeAll(async () => {
-//     ad = new AdRecord()
-// });
-
 import {AdRecord} from "../records/ad.record";
 
 const defaultObj = {
-    id: 'dsfs',
+    id: 'abc',
     description: "Test descr",
-    lat: 0,
+    lat: 3,
     lon: 2,
     name: "test name",
     price: 1,
     url: "https://localhost:8080"
 
-}
+};
 
 test('Can build AdRecord', () => {
     const ad = new AdRecord(defaultObj);
 
+    console.log('ad.record.rest.ts', ad)
+
     expect(ad.name).toBe('test name');
     expect(ad.description).toBe('Test descr');
+    expect(ad.lat).toBe(3);
+    expect(ad.lon).toBe(2);
 });
 
 test('Validates invalid price', () => {
