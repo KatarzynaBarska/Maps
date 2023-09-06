@@ -3,6 +3,7 @@ import cors from "cors";
 import "express-async-errors";
 import {handleError} from "./utils/errors";
 import rateLimit from "express-rate-limit";
+import {adRouter} from "./routers/ad.router";
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(rateLimit({
     windowMs: 5 * 60 * 1000,
     max: 100,
 }));
-//Routes
+app.use('/ad', adRouter);
 
 //sprawdzenie czy działa obsługa błędów:
 // app.get( '/', async (req, res) => {
