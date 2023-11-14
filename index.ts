@@ -17,7 +17,12 @@ app.use(rateLimit({
     windowMs: 5 * 60 * 1000,
     max: 100,
 }));
-app.use('/ad', adRouter);
+
+const router = Router();
+
+router.use('/ad', adRouter);
+
+app.use('/api', router);
 // const router = Router();
 // router.use('/ad', adRouter);
 // app.use('/api', adRouter);
