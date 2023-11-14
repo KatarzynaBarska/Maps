@@ -18,11 +18,11 @@ app.use(rateLimit({
     max: 100,
 }));
 
-const router = Router();
+//const router = Router();
 
-router.use('/ad', adRouter);
+app.use('/api/ad', adRouter);
 
-app.use('/api', router);
+//app.use('/api', router);
 // const router = Router();
 // router.use('/ad', adRouter);
 // app.use('/api', adRouter);
